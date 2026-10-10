@@ -13,6 +13,9 @@ Environment: Windows PowerShell, Node.js `v26.5.0`, package has zero runtime dep
 - `npm run lint` — pass (`node --check` for runtime and browser modules).
 - `npm run build` — pass; all runtime and browser assets found.
 - `npm audit --omit=dev` — pass: 0 dependencies and 0 vulnerabilities.
+- `npm ci --ignore-scripts` — pass after the lockfile was generated.
+- `npm pack --ignore-scripts` — pass; `sincebox-0.1.0.tgz`, 9 packaged files.
+- Package SHA-256: `c4315cdf80ac37c7ea3abdfba55d7d2c924899402d1fce183fa0ca0c461ac5cc`.
 - CLI smoke: add → list → done → list using a temporary JSON data file.
 - HTTP smoke: loopback `POST /api/items` → `POST /api/items/:id/done` → `GET /api/items`.
 - `git diff --check` — required before commit.
