@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sincebox — when did I last do this?</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">LOCAL / NO ACCOUNT / NO STREAKS</p>
+        <h1>When did I<br><em>last</em> do this?</h1>
+        <p class="lede">A tiny, guilt-free board for the things your calendar never understood.</p>
+      </header>
+
+      <section class="add-panel" aria-labelledby="add-heading">
+        <h2 id="add-heading">Remember one thing</h2>
+        <form id="add-form">
+          <label>Thing <input name="name" required maxlength="120" placeholder="Wash towels" autocomplete="off"></label>
+          <label>Remind me after <input name="intervalDays" type="number" min="1" max="3650" placeholder="optional"> days</label>
+          <button type="submit">Add timer <span>↗</span></button>
+        </form>
+      </section>
+
+      <section class="board" aria-live="polite">
+        <div class="board-head"><h2>Your sinceboard</h2><span id="count"></span></div>
+        <div id="items" class="items"><p class="empty">Loading your local timers…</p></div>
+      </section>
+
+      <footer><span>Stored on this machine.</span><a href="/api/export" download="sincebox.json">Export your data ↗</a></footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

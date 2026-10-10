@@ -1,0 +1,25 @@
+{
+  "name": "sincebox",
+  "version": "0.1.0",
+  "description": "A local-first timer for answering: when did I last do this?",
+  "type": "module",
+  "bin": {
+    "sincebox": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/cli.js serve",
+    "lint": "node --check src/cli.js && node --check src/server.js && node --check src/store.js && node --check public/app.js",
+    "build": "node scripts/build-check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "files": [
+    "src",
+    "public",
+    "README.md",
+    "LICENSE"
+  ]
+}
